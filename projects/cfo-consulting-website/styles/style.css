@@ -1,0 +1,761 @@
+/* =============================================
+   LORI LANGENDORF, CPA — STYLESHEET
+   Refined professional polish, original palette kept
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* =============================================
+   CSS VARIABLES
+   ============================================= */
+:root {
+    --navBlue:      #3048A1;
+    --navBlue-dark: #1e2f6b;
+    --navBlue-light:#4a62c4;
+    --white:        #ffffff;
+    --off-white:    #f8f9fc;
+    --accent-color: #d0d5e8;
+    --green:        rgb(0, 195, 42);
+    --green-dark:   rgb(0, 150, 32);
+    --green-glow:   rgba(0, 195, 42, 0.2);
+    --text-dark:    #1a1f36;
+    --text-mid:     #4a5068;
+    --text-light:   #8892b0;
+    --shadow-sm:    0 2px 8px rgba(48, 72, 161, 0.12);
+    --shadow-md:    0 6px 24px rgba(48, 72, 161, 0.18);
+    --shadow-lg:    0 16px 48px rgba(48, 72, 161, 0.22);
+    --radius:       10px;
+    --radius-sm:    6px;
+    --transition:   all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    line-height: 1.7;
+    animation: websiteFadeIn 0.5s ease-in;
+}
+
+@keyframes websiteFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.25;
+}
+
+/* =============================================
+   TOP BAR
+   ============================================= */
+#topBar {
+    background: linear-gradient(90deg, var(--navBlue-dark), var(--navBlue));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 8px 40px;
+    gap: 24px;
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#topBar h4 {
+    margin: 0;
+    color: rgba(255,255,255,0.85);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.88rem;
+}
+
+#topBar h4::before {
+    margin-right: 6px;
+    opacity: 0.6;
+}
+
+#topBar button {
+    background: var(--green);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 8px var(--green-glow);
+    animation: none;
+    margin: 0;
+}
+
+#topBar button:hover {
+    background: var(--green-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px var(--green-glow);
+    animation: none;
+}
+
+/* =============================================
+   NAV
+   ============================================= */
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: var(--white);
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a img {
+    height: 62px;
+    display: block;
+    padding: 4px 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+}
+
+nav ul li {
+    margin: 0;
+    width: 200px;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    position: relative;
+    transition: var(--transition);
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: var(--navBlue);
+    border-radius: 2px 2px 0 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li:hover::after {
+    width: 60%;
+}
+
+nav ul li:hover {
+    background-color: var(--off-white);
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: var(--text-dark);
+    display: block;
+    height: 100%;
+    padding: 0 16px;
+    transition: var(--transition);
+}
+
+nav ul li:hover a {
+    color: var(--navBlue);
+}
+
+/* =============================================
+   HERO BANNER (home page)
+   ============================================= */
+main #banner {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                      url('../images/SaultSteMarie.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+main #banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    pointer-events: none;
+}
+
+main #banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    max-width: 720px;
+    padding: 0 40px;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    animation: slideIn 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    line-height: 1.4;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =============================================
+   INNER PAGE BANNERS
+   ============================================= */
+#bannerBusiness,
+#bannerAccounting,
+#bannerCFO,
+#bannerOurCompany {
+    width: 100%;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+}
+
+#bannerBusiness {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                      url('../images/business.jpg');
+}
+
+#bannerAccounting {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                      url('../images/accounting.jpg');
+}
+
+#bannerCFO {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                      url('../images/cfo.jpg');
+}
+
+#bannerOurCompany {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                      url('../images/ourcompany.jpg');
+    height: 180px;
+}
+
+#bannerBusiness h2,
+#bannerAccounting h2,
+#bannerCFO h2,
+#bannerOurCompany h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    max-width: 680px;
+    padding: 0 40px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    line-height: 1.4;
+}
+
+/* =============================================
+   SERVICES SECTION TITLE
+   ============================================= */
+.services > h1 {
+    background: linear-gradient(90deg, var(--navBlue-dark), var(--navBlue));
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 18px 0;
+    margin: 0;
+    letter-spacing: 0.04em;
+}
+
+/* =============================================
+   HOME PAGE SERVICE SECTIONS
+   ============================================= */
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .serviceSection {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    padding: 0;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+section .serviceSection::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(30, 47, 107, 0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    transition: var(--transition);
+    z-index: 1;
+}
+
+section .serviceSection:hover::before {
+    background: linear-gradient(to top, rgba(30, 47, 107, 0.92) 0%, rgba(0,0,0,0.35) 60%, transparent 100%);
+}
+
+section .serviceSection > * {
+    position: relative;
+    z-index: 2;
+}
+
+section .serviceSection:first-of-type {
+    background-image: url('../images/service1home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+section .serviceSection:nth-of-type(2) {
+    background-image: url('../images/service2home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+section .serviceSection:last-of-type {
+    background-image: url('../images/service3home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+section .serviceSection:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+section div h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    background: none;
+    margin-bottom: 8px;
+    padding: 0 20px;
+}
+
+section div h5 {
+    color: rgba(255,255,255,0.85);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+section .serviceSection button {
+    align-self: center;
+    background: var(--green);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: var(--transition);
+    animation: none;
+    margin: 0;
+    letter-spacing: 0.03em;
+    box-shadow: 0 4px 14px var(--green-glow);
+    width: fit-content;
+}
+
+section .serviceSection button:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--green-glow);
+    animation: none;
+}
+
+/* =============================================
+   ARTICLE / ASIDE (inner pages)
+   ============================================= */
+.services article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 88%;
+    margin: 48px auto;
+    gap: 24px;
+}
+
+aside {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 32px 28px;
+    width: calc(33% - 16px);
+    min-width: 260px;
+    border-top: 4px solid var(--navBlue);
+    transition: var(--transition);
+}
+
+aside:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+aside h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navBlue);
+    margin-bottom: 14px;
+}
+
+aside p {
+    color: var(--text-mid);
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.aboutUs aside {
+    width: 88%;
+    border-top: 4px solid var(--navBlue);
+}
+
+.aboutUs aside p {
+    margin-bottom: 16px;
+}
+
+/* =============================================
+   SERVICE CARDS (inner pages)
+   ============================================= */
+#banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 48px 40px;
+    background: linear-gradient(135deg, var(--navBlue-dark) 0%, var(--navBlue) 100%);
+}
+
+.serviceCard {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius);
+    text-align: center;
+    padding: 40px 36px;
+    min-width: 220px;
+    max-width: 300px;
+    flex: 1;
+    cursor: pointer;
+    transition: var(--transition);
+    animation: none;
+}
+
+.serviceCard:hover {
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    animation: none;
+}
+
+.serviceCard h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 0 8px 0;
+    line-height: 1.35;
+}
+
+.serviceCard h5 {
+    color: rgba(255,255,255,0.7);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+}
+
+.serviceCard button {
+    background: var(--green);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: var(--transition);
+    animation: none;
+    margin: 0;
+    letter-spacing: 0.03em;
+}
+
+.serviceCard button:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px var(--green-glow);
+    animation: none;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+    background: linear-gradient(90deg, var(--navBlue-dark), var(--navBlue));
+    color: var(--white);
+    padding: 40px 40px 24px;
+    margin: 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+footer ul li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+footer ul li a {
+    color: rgba(255,255,255,0.8);
+    transition: var(--transition);
+    position: relative;
+    padding-bottom: 4px;
+}
+
+footer ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--green);
+    border-radius: 1px;
+    transition: width 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--white);
+}
+
+footer ul li a:hover::after {
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    nav ul li {
+        width: 160px;
+    }
+
+    .services article {
+        width: 94%;
+    }
+
+    aside {
+        width: calc(50% - 12px);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Top bar */
+    #topBar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 16px;
+    }
+
+    /* Nav stacks vertically */
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        position: relative;
+    }
+
+    nav a img {
+        height: 50px;
+        padding: 4px 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        height: auto;
+        line-height: normal;
+        padding: 0;
+        border-bottom: 1px solid var(--accent-color);
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 16px 20px;
+        text-align: center;
+    }
+
+    nav ul li::after {
+        display: none;
+    }
+
+    /* Banners */
+    main #banner,
+    #bannerBusiness,
+    #bannerAccounting,
+    #bannerCFO {
+        height: 240px;
+        background-attachment: scroll;
+    }
+
+    main #banner h2,
+    #bannerBusiness h2,
+    #bannerAccounting h2,
+    #bannerCFO h2 {
+        font-size: 1.2rem;
+        padding: 0 24px;
+    }
+
+    /* Services title */
+    .services > h1 {
+        font-size: 1.3rem;
+        padding: 14px 20px;
+    }
+
+    /* Article asides -- stack vertically */
+    .services article {
+        flex-direction: column;
+        width: 92%;
+        gap: 16px;
+        margin: 32px auto;
+    }
+
+    aside {
+        width: 100%;
+        padding: 24px 20px;
+    }
+
+    /* Home service sections -- stack */
+    section {
+        flex-direction: column;
+    }
+
+    section .serviceSection {
+        height: 260px;
+        min-width: 100%;
+    }
+
+    /* Service cards */
+    #banner {
+        padding: 32px 20px;
+        gap: 16px;
+    }
+
+    .serviceCard {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 28px 24px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 24px 20px;
+    }
+
+    footer ul {
+        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    main #banner h2,
+    #bannerBusiness h2,
+    #bannerAccounting h2,
+    #bannerCFO h2 {
+        font-size: 1rem;
+    }
+
+    #topBar button {
+        width: 100%;
+        text-align: center;
+    }
+}

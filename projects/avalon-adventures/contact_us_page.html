@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Avalon Adventures</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-hero" style="background-image: url(images/Stjohns.png); background-position: center 20%;">
+            <div id="logo"><a href="index.html"><img src="images/Avalon-Adventures-Transparent-3.png" alt="Avalon Adventures Logo"></a></div>
+            <h1>Contact Us</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about_us_page.html">About Us</a>
+            <a href="staff_bios_page.html">Our Team</a>
+            <a href="contact_us_page.html" class="active">Contact Us</a>
+        </nav>
+
+        <main>
+            <div class="contact-wrapper">
+                <h2>Customer Support</h2>
+                <p class="form-subtitle">Have a question or ready to book? We'd love to hear from you.</p>
+                <div id="error_message"></div>
+
+                <form id="myform" onsubmit="return validation()">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="tel" id="phone" placeholder="709-555-1234">
+                    </div>
+                    <div class="form-group">
+                        <label for="question">Your Message</label>
+                        <textarea id="question" rows="6" placeholder="Tell us about your adventure plans or ask us anything..."></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <div class="contact-bar">
+            <span><strong>Email:</strong> info@AvalonAdventures.ca</span>
+            <span><strong>Phone:</strong> 709-555-5555</span>
+            <span><strong>Address:</strong> 404 Herry Ln. St. John's, NL, Canada A1A-3M8</span>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><img src="images/facebookicon.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Twitter"><img src="images/twittericon.png" alt="Twitter"></a>
+                    <a href="#" aria-label="Instagram"><img src="images/instagramicon.png" alt="Instagram"></a>
+                </div>
+                <p class="footer-text">&copy; 2026 Avalon Adventures. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

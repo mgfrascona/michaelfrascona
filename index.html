@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Michael Frascona</title>
+    <script src="scripts/site.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="scripts/scene.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headerMain">
+            <a href="index.html">
+                <div class="logo-container">
+                    <svg id="logo" width="80px" height="auto" viewBox="0 0 300 300" overflow="visible">
+                        <g id="gear-group">
+                            <path id="gear-path" fill-rule="evenodd" d="M171.718,1.581C157.316,-0.527 142.684,-0.527 128.282,1.581L113.857,40.875C108.554,42.632 103.386,44.773 98.394,47.281L60.409,29.695C48.735,38.388 38.388,48.735 29.695,60.409L47.281,98.394C44.773,103.386 42.632,108.554 40.875,113.857L1.581,128.282C-0.527,142.684 -0.527,157.316 1.581,171.718L40.875,186.143C42.632,191.446 44.773,196.614 47.281,201.606L29.695,239.591C38.388,251.265 48.735,261.612 60.409,270.305L98.394,252.719C103.386,255.227 108.554,257.368 113.857,259.125L128.282,298.419C142.684,300.527 157.316,300.527 171.718,298.419L186.143,259.125C191.446,257.368 196.614,255.227 201.606,252.719L239.591,270.305C251.265,261.612 261.612,251.265 270.305,239.591L252.719,201.606C255.227,196.614 257.368,191.446 259.125,186.143L298.419,171.718C300.527,157.316 300.527,142.684 298.419,128.282L259.125,113.857C257.368,108.554 255.227,103.386 252.719,98.394L270.305,60.409C261.612,48.735 251.265,38.388 239.591,29.695L201.606,47.281C196.614,44.773 191.446,42.632 186.143,40.875L171.718,1.581ZM150,60.314C199.499,60.314 239.686,100.501 239.686,150C239.686,199.499 199.499,239.686 150,239.686C100.501,239.686 60.314,199.499 60.314,150C60.314,100.501 100.501,60.314 150,60.314Z"/>
+                        </g>
+                        <path id="infinity-path" d="M153.067,139.079C161.698,130.175 176.257,114.839 190.022,114.839C210.825,113.293 226.916,129.347 225.717,149.802C225.827,170.047 211.492,187.182 192.016,185.207C176.493,185.207 157.137,166.946 150.064,158.325L150.024,158.383L142.524,149.728C142.49,149.221 121.466,128.407 109.11,127.447C96.209,126.445 85.665,136.789 85.665,149.729C84.884,163.32 96.575,174.285 110.107,173.792C118.969,173.445 133.021,160.11 139.303,153.441L147.404,161.821C139.499,171.415 123.67,185.134 109.935,185.134C90.679,186.531 74.22,169.512 74.22,149.729C74.651,129.322 90.692,112.604 109.11,114.839C124.633,114.839 141.33,135.004 150.064,142.13L150.096,142.099L158.669,150.06C160.9,153.045 178.625,175.028 192.016,173.762C205.101,174.491 213.647,163.566 213.467,149.729C214.124,135.148 203.567,124.834 190.022,127.447C180.532,128.184 167.357,140.612 161.472,146.584L153.067,139.079Z"/>
+                    </svg>
+                    <h2>Michael Frascona</h2>
+                </div>
+            </a>
+            <div class="hamburgerIcon">
+                <div class="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resumeDownload">Resumé</a></li>
+                <li><a href="#aboutMe">About</a></li> 
+                <li><a href="#contactForm">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <canvas id="heroCanvas"></canvas>
+            <div class="heroContent">
+                <h2>Creating visuals.</h2>
+                <h2>Building websites.</h2>
+                <h2>Designing experiences.</h2>
+                <p class="heroTagline">Web design &amp; development for businesses and nonprofits with unique needs.</p>
+                <div class="heroCTAs">
+                    <a href="#projects" class="btnPrimary">View My Work</a>
+                    <a href="#contactForm" class="btnSecondary">Start a Project</a>
+                </div>
+            </div>
+        <div class="dragHint">
+            <div class="dragHintIcon"></div>
+            <div class="dragHintArrows">
+                <span>drag to explore</span>
+            </div>
+        </div>
+        </div>
+        <div class="infoSection">
+            <div class="testimonials">
+                <h3>What Clients Say</h3>
+                <p class="sectionLead">Real feedback from the people I've built for.</p>
+                <div class="testimonialsGrid">
+                    <figure class="testimonialCard">
+                        <div class="testimonialQuoteMark" aria-hidden="true">&ldquo;</div>
+                        <div class="testimonialRating" aria-label="5 out of 5 stars">
+                            <span aria-hidden="true">&#9733;</span><span aria-hidden="true">&#9733;</span><span aria-hidden="true">&#9733;</span><span aria-hidden="true">&#9733;</span><span aria-hidden="true">&#9733;</span>
+                        </div>
+                        <blockquote class="testimonialQuote">
+                            <p>Working with Michael Frascona was a turning point for our website. From the very beginning, his skill level and attention to detail were evident — he brought thoughtful initiative to every stage of the project, not just executing what we asked for but proactively suggesting improvements we hadn't even considered.</p>
+                            <p>Michael took genuine care in aligning the design with our brand identity, ensuring every element — from color palette to typography — felt authentically <em>Kibo Alliance</em>. He was equally committed to accessibility, making sure our site could be used and enjoyed by as many people as possible, which reflects the inclusive values at the heart of our mission.</p>
+                            <p>The overall look and feel of our website improved dramatically under his direction, and we've seen a real increase in engagement as a result. Michael is a talented, dedicated web designer, and we couldn't be more pleased with the outcome of our work together.</p>
+                        </blockquote>
+                        <figcaption class="testimonialAuthor">
+                            <div class="testimonialAvatar" aria-hidden="true">
+                                <img src="assets/images/sherry-deleon.jpg" alt="Avatar of Sherry DeLeon">
+                            </div>
+                            <div class="testimonialAuthorInfo">
+                                <span class="testimonialAuthorName">Sherry DeLeon</span>
+                                <span class="testimonialAuthorRole">Executive Director, Kibo Alliance</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="missionStatement">
+                <h3>My Mission</h3>
+                <p>I strive to create user experiences that are not only functional but also visually striking. My goal is to help businesses and organizations of every size expand their reach by building websites that feel alive.</p>
+            </div>
+            <div class="services">
+                <h3>What I Offer</h3>
+                <div class="servicesGrid">
+                    <div class="serviceCard">
+                        <div class="serviceIcon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                        </div>
+                        <h4>Custom Website Design</h4>
+                        <p>Animated, responsive websites built from scratch. Designed around your brand, audience, and goals.</p>
+                    </div>
+                    <div class="serviceCard">
+                        <div class="serviceIcon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 2 12 12"/><path d="M16 2h6v6"/></svg>
+                        </div>
+                        <h4>Nonprofit &amp; Charity Sites</h4>
+                        <p>Mission-focused webpages with donation forms, volunteer sign-ups, and event pages. All built to help your cause.</p>
+                    </div>
+                    <div class="serviceCard">
+                        <div class="serviceIcon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+                        </div>
+                        <h4>Accessibility &amp; SEO</h4>
+                        <p>Easy-to-read markup and page hierarchy for better accessibility and search engine optimization.</p>
+                    </div>
+                    <div class="serviceCard">
+                        <div class="serviceIcon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                        </div>
+                        <h4>Brand &amp; UI Design</h4>
+                        <p>Logos, color palettes, and typography that give your organization a special identity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skillsSection">
+                    <div class="skillsCard">
+                        <h4>Design & Creativity</h4>
+                        <ul>
+                            <li>CSS & JavaScript animation</li>
+                            <li>UI/UX design</li>
+                            <li>Blender</li>
+                            <li>Figma & Adobe XD</li>
+                            <li>Graphic design</li>
+                        </ul>
+                    </div>
+                    <div class="skillsCard">
+                        <h4>Frontend & 3D Development</h4>
+                        <ul>
+                            <li>Three.js & WebGL</li>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>React.js</li>
+                            <li>Responsive design & accessibility</li>
+                        </ul>
+                    </div>
+                    <div class="skillsCard">
+                        <h4>Data Management</h4>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Database design & management</li>
+                        </ul>
+                    </div>
+                    <div class="skillsCard">
+                        <h4>Tools & Workflow</h4>
+                        <ul>
+                            <li>GitHub</li>
+                            <li>Azure DevOps</li>
+                            <li>Version control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="projects">
+                <h3>Featured Projects</h3>
+                <p class="sectionLead">A gallery of my works, both personal and client-based. All putting emphasis on colorful design, sleek performance, and functional interaction.</p>
+                <div class="projectsCarousel" role="region" aria-label="Featured projects carousel">
+                    <button class="carouselBtn carouselPrev" aria-label="Previous project" type="button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="carouselViewport">
+                        <div class="carouselTrack">
+                            <div class="projectBox" style="background-image: url('assets/images/kibo_alliance_screenshot.png');">
+                                <div class="projectBoxOverlay">
+                                    <span class="projectTag">Nonprofit Organization</span>
+                                    <h4>Kibo Alliance</h4>
+                                    <p>Revamped and lively website for Kibo Alliance, a nonprofit dedicated to supporting agricultural initiatives in African and Asian communities.</p>
+                                    <button><a href="https://www.kiboalliance.org/">See Project</a></button>
+                                </div>
+                            </div>
+                            <div class="projectBox" style="background-image: url('assets/images/lori_langendorf_screenshot.png');">
+                                <div class="projectBoxOverlay">
+                                    <span class="projectTag">Small Business</span>
+                                    <h4>Lori Langendorf, CPA</h4>
+                                    <p>A custom website for Lori Langendorf, the Certified Public Accountant of a mid-sized company based in Sault Ste. Marie, MI.</p>
+                                    <button><a href="projects/cfo-consulting-website/home.html">See Project</a></button>
+                                </div>
+                            </div>
+                            <div class="projectBox" style="background-image: url('assets/images/avalon_adventures_screenshot.png');">
+                                <div class="projectBoxOverlay">
+                                    <span class="projectTag">Travel &amp; Tourism</span>
+                                    <h4>Avalon Adventures</h4>
+                                    <p>A custom website for Avalon Adventures, a fictional travel company based in St. John's, NL, Canada.</p>
+                                    <button><a href="projects/avalon-adventures/index.html">See Project</a></button>
+                                </div>
+                            </div>
+                            <div class="projectBox" style="background-image: url('assets/images/pokemon_screenshot.png');">
+                                <div class="projectBoxOverlay">
+                                    <span class="projectTag">API Integration</span>
+                                    <h4>Pokémon API</h4>
+                                    <p>A JavaScript-run API fetcher and generator for the Pokémon API, showcasing various Pokémon data and functionality.</p>
+                                    <button><a href="projects/pokemon-api/index.html">See Project</a></button>
+                                </div>
+                            </div>
+                            <div class="projectBox" style="background-image: url('assets/images/todo_screenshot.png');">
+                                <div class="projectBoxOverlay">
+                                    <span class="projectTag">Web App</span>
+                                    <h4>To-Do List App</h4>
+                                    <p>A simple yet effective to-do list application built with HTML, CSS, and JavaScript. Includes a working checkmark system!</p>
+                                    <button><a href="projects/todo/index.html">See Project</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carouselBtn carouselNext" aria-label="Next project" type="button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                    <div class="carouselDots" role="tablist" aria-label="Project slides"></div>
+                </div>
+            </div>
+            <div id="aboutMe">
+                <div class="profilePic">
+                    <img src="assets/images/profile-pic.jpg" alt="Portrait of Michael Frascona">
+                </div>
+                <div class="aboutMeInfo">
+                    <h3>About Me</h3>
+                    <p>I'm a web and UI/UX designer who first entered the field through animation and 3D art. That background shapes how I work: I build websites that actually feel alive, and I spot details most people skim past. As an autistic designer, I'm wired to notice if something isn't quite right, even if it's tiny. I'd rather fix it than just ship it. I specifically love working with small businesses and nonprofits, where one well-built site can genuinely change how an organization shows up in the world.</p>
+                </div>
+            </div>
+            <div id="contactForm">
+                <form action="https://formspree.io/f/mjgpnkak" method="POST">
+                    <h4>Contact Me</h4>
+                    <input type="text" name="name" placeholder="*Your name" required>
+                    <input type="text" name="phone" placeholder="Your phone number (optional)">
+                    <input type="email" name="email" placeholder="*Your email address" required>
+                    <input type="text" name="subject" placeholder="*Subject" required>
+                    <textarea name="message" placeholder="*Your message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div id="resumeDownload">
+                <a href="assets/resume-michael-frascona.pdf" download>Download Resumé</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Michael Frascona. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
