@@ -2,7 +2,7 @@
 
 A personal web portfolio showcasing my work as a web designer and creative developer. Built from scratch in VS Code with a focus on artistic flair, responsive design, and interactive experiences.
 
-🌐 **[View Live Site](https://mgfrascona.github.io/)**
+🌐 **[View Live Site](https://www.michaelfrascona.com/)**
 
 ---
 
@@ -95,7 +95,7 @@ Then right-click `index.html` in VS Code and select **Open with Live Server**.
 
 Have a project in mind? I'd love to hear from you.
 
-- 📧 Use the contact form on the [live site](https://mgfrascona.github.io/)
+- 📧 Use the contact form on the [live site](https://www.michaelfrascona.com/)
 - 💼 [LinkedIn](https://www.linkedin.com/in/michael-frascona-2765421ab/)
 - 🐙 [GitHub](https://github.com/mgfrascona)
 
